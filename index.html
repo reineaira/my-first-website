@@ -92,10 +92,6 @@
       color: #6a5acd;
     }
 
-    .hero-button:hover {
-      transform: translateY(-2px);
-    }
-
     .hero-button.outline {
       background: transparent;
       color: white;
@@ -225,22 +221,82 @@
       font-weight: bold;
     }
 
-    .project-button:hover {
-      background: #5848c2;
-    }
-
-    /* PROJECT SHOWCASE */
+    /* SWEET CORNER */
 
     .showcase {
-      margin-top: 30px;
+      margin-top: 35px;
       padding: 35px;
       background: #eeeaff;
-      border-radius: 18px;
+      border-radius: 20px;
       text-align: center;
     }
 
     .showcase h3 {
       color: #5b4bc4;
+      font-size: 28px;
+      margin-top: 0;
+    }
+
+    .sweet-products {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 30px;
+    }
+
+    .sweet-product {
+      background: white;
+      padding: 22px 15px;
+      border-radius: 16px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    }
+
+    .sweet-icon {
+      font-size: 45px;
+    }
+
+    .sweet-product h4 {
+      color: #5b4bc4;
+      font-size: 18px;
+      margin: 10px 0;
+    }
+
+    .sweet-product p {
+      color: #666;
+      font-size: 14px;
+    }
+
+    .sweet-product strong {
+      color: #8a2be2;
+      font-size: 17px;
+    }
+
+    .sweet-button {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 18px;
+      background: #6a5acd;
+      color: white;
+      text-decoration: none;
+      border-radius: 20px;
+      font-weight: bold;
+    }
+
+    .sweet-button:hover {
+      background: #5848c2;
+    }
+
+    .sweet-contact {
+      margin-top: 30px;
+      padding: 25px;
+      background: white;
+      border-radius: 16px;
+    }
+
+    .sweet-contact h4 {
+      color: #5b4bc4;
+      font-size: 20px;
+      margin-top: 0;
     }
 
     /* WHY WORK WITH ME */
@@ -292,10 +348,6 @@
       margin: 5px;
     }
 
-    .contact-button:hover {
-      transform: translateY(-2px);
-    }
-
     /* FOOTER */
 
     footer {
@@ -327,6 +379,10 @@
         grid-template-columns: 1fr;
       }
 
+      .sweet-products {
+        grid-template-columns: 1fr 1fr;
+      }
+
       nav a {
         display: inline-block;
         margin: 5px 7px;
@@ -339,26 +395,28 @@
 
     }
 
+    @media (max-width: 450px) {
+
+      .sweet-products {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
   </style>
 
 </head>
 
-
 <body>
-
 
   <!-- NAVIGATION -->
 
   <nav>
 
     <a href="#about">About</a>
-
     <a href="#services">Services</a>
-
     <a href="#skills">Skills</a>
-
     <a href="#projects">Projects</a>
-
     <a href="#contact">Contact</a>
 
   </nav>
@@ -438,7 +496,6 @@
 
     <div class="services">
 
-
       <div class="service">
 
         <div class="service-icon">🌐</div>
@@ -451,7 +508,6 @@
         </p>
 
       </div>
-
 
       <div class="service">
 
@@ -466,7 +522,6 @@
 
       </div>
 
-
       <div class="service">
 
         <div class="service-icon">🎬</div>
@@ -478,7 +533,6 @@
         </p>
 
       </div>
-
 
     </div>
 
@@ -498,19 +552,12 @@
     <div class="skills">
 
       <div class="skill">HTML</div>
-
       <div class="skill">CSS</div>
-
       <div class="skill">Responsive Design</div>
-
       <div class="skill">Basic Web Design</div>
-
       <div class="skill">Canva</div>
-
       <div class="skill">CapCut</div>
-
       <div class="skill">Basic Digital Tools</div>
-
       <div class="skill">Fast Learner</div>
 
     </div>
@@ -529,9 +576,7 @@
       my web design and digital skills.
     </p>
 
-
     <div class="projects">
-
 
       <!-- PROJECT 1 -->
 
@@ -622,29 +667,139 @@
 
       </div>
 
-
     </div>
 
 
-    <!-- SWEET CORNER PROJECT -->
+    <!-- SWEET CORNER -->
 
     <div id="sweet-corner" class="showcase">
 
-      <h3>🍰 Small Business Landing Page — Sweet Corner</h3>
+      <h3>🍰 Sweet Corner</h3>
 
       <p>
-        This is a sample landing-page concept created to demonstrate
-        how I can organize business information into a simple,
-        attractive, and easy-to-understand webpage.
+        Freshly baked treats made with love.
+        Choose your favorite dessert and place your order today!
       </p>
 
-      <p>
-        The design focuses on a welcoming presentation,
-        clear information, and a simple customer experience.
-      </p>
+      <div class="sweet-products">
+
+        <div class="sweet-product">
+
+          <div class="sweet-icon">🧁</div>
+
+          <h4>Classic Cupcakes</h4>
+
+          <p>
+            Soft and delicious cupcakes with creamy frosting.
+          </p>
+
+          <strong>₱120 / 6 pcs</strong>
+
+          <br>
+
+          <a
+            class="sweet-button"
+            href="mailto:bautistareineaira34@gmail.com?subject=Order%20-%20Classic%20Cupcakes"
+          >
+            Order Now
+          </a>
+
+        </div>
+
+
+        <div class="sweet-product">
+
+          <div class="sweet-icon">🍪</div>
+
+          <h4>Chocolate Cookies</h4>
+
+          <p>
+            Homemade chocolate cookies perfect for any occasion.
+          </p>
+
+          <strong>₱150 / box</strong>
+
+          <br>
+
+          <a
+            class="sweet-button"
+            href="mailto:bautistareineaira34@gmail.com?subject=Order%20-%20Chocolate%20Cookies"
+          >
+            Order Now
+          </a>
+
+        </div>
+
+
+        <div class="sweet-product">
+
+          <div class="sweet-icon">🍰</div>
+
+          <h4>Mini Celebration Cake</h4>
+
+          <p>
+            A simple and sweet cake for birthdays and celebrations.
+          </p>
+
+          <strong>₱450</strong>
+
+          <br>
+
+          <a
+            class="sweet-button"
+            href="mailto:bautistareineaira34@gmail.com?subject=Order%20-%20Mini%20Celebration%20Cake"
+          >
+            Order Now
+          </a>
+
+        </div>
+
+
+        <div class="sweet-product">
+
+          <div class="sweet-icon">🍓</div>
+
+          <h4>Strawberry Dessert</h4>
+
+          <p>
+            A creamy strawberry treat made for dessert lovers.
+          </p>
+
+          <strong>₱180</strong>
+
+          <br>
+
+          <a
+            class="sweet-button"
+            href="mailto:bautistareineaira34@gmail.com?subject=Order%20-%20Strawberry%20Dessert"
+          >
+            Order Now
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="sweet-contact">
+
+        <h4>Want to place an order?</h4>
+
+        <p>
+          Send us a message for orders, inquiries,
+          and special requests.
+        </p>
+
+        <a
+          class="contact-button"
+          href="mailto:bautistareineaira34@gmail.com?subject=Sweet%20Corner%20Inquiry"
+        >
+          📩 Contact Us
+        </a>
+
+      </div>
 
     </div>
-
 
   </section>
 
@@ -660,9 +815,7 @@
       willingness to learn, and attention to detail.
     </p>
 
-
     <div class="reasons">
-
 
       <div class="reason">
 
@@ -705,7 +858,6 @@
 
       </div>
 
-
     </div>
 
   </section>
@@ -746,7 +898,6 @@
     </p>
 
   </footer>
-
 
 </body>
 
