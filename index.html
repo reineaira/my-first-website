@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Reine Aira | Portfolio</title>
 
   <style>
@@ -42,7 +43,7 @@
       padding: 15px;
       position: sticky;
       top: 0;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       z-index: 10;
     }
 
@@ -51,6 +52,10 @@
       text-decoration: none;
       margin: 0 10px;
       font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #8a2be2;
     }
 
     section {
@@ -70,7 +75,7 @@
       background: white;
       border-radius: 15px;
       padding: 30px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     }
 
     .skills {
@@ -101,7 +106,7 @@
       max-width: 390px;
       padding: 28px;
       border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     }
 
     .project h3 {
@@ -113,4 +118,148 @@
       margin-top: 15px;
       padding: 11px 20px;
       background: #6a5acd;
-     
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      background: #5848c2;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 32px;
+      }
+
+      header p {
+        font-size: 17px;
+      }
+
+      nav a {
+        margin: 0 5px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Reine Aira</h1>
+    <p>Beginner Web Designer & Creative Learner</p>
+    <p>Welcome to my portfolio!</p>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Me</h2>
+
+    <div class="about">
+      <p>
+        Hello! I'm Reine Aira. I am a beginner in web design
+        and I enjoy learning new digital skills.
+      </p>
+
+      <p>
+        I am hardworking, willing to learn, and excited to
+        create simple and useful websites.
+      </p>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2>My Skills</h2>
+
+    <div class="skills">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">Basic Web Design</div>
+      <div class="skill">Canva</div>
+      <div class="skill">CapCut</div>
+      <div class="skill">Fast Learner</div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2>My Projects</h2>
+
+    <div class="projects">
+
+      <div class="project">
+        <h3>Project 1 — My First Website</h3>
+
+        <p>
+          A simple personal website created while learning
+          HTML and CSS.
+        </p>
+
+        <a class="button" href="#about">
+          View Project
+        </a>
+      </div>
+
+      <div class="project">
+        <h3>Project 2 — Small Business Landing Page 🍰</h3>
+
+        <p>
+          A sample landing page created for a small business,
+          designed to be simple, clean, and easy to use.
+        </p>
+
+        <a class="button" href="#contact">
+          View Project
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+
+    <div class="about">
+
+      <p>
+        Interested in working with me or learning more about
+        my work?
+      </p>
+
+      <a class="button" href="mailto:your@email.com">
+        Send Me an Email
+      </a>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>
+      © 2026 Reine Aira. All rights reserved.
+    </p>
+  </footer>
+
+</body>
+</html>
