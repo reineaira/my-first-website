@@ -4,7 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Reine Aira | Portfolio</title>
+  <title>Reine Aira | Web Design & Digital Services</title>
+
+  <meta
+    name="description"
+    content="Reine Aira — beginner web designer and digital creative offering simple websites, Canva designs, and short-form video editing."
+  >
 
   <style>
     * {
@@ -14,70 +19,146 @@
 
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f7f7f7;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f7fb;
       color: #333;
       line-height: 1.6;
     }
 
-    header {
-      background: linear-gradient(135deg, #6a5acd, #8a2be2);
-      color: white;
-      text-align: center;
-      padding: 80px 20px;
-    }
-
-    header h1 {
-      font-size: 42px;
-      margin: 0 0 10px;
-    }
-
-    header p {
-      font-size: 19px;
-      margin: 8px 0;
-    }
-
+    /* NAVIGATION */
     nav {
-      background: white;
-      text-align: center;
-      padding: 15px;
       position: sticky;
       top: 0;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      z-index: 10;
+      z-index: 100;
+      background: rgba(255,255,255,0.96);
+      padding: 15px 20px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
     }
 
     nav a {
-      color: #6a5acd;
+      color: #5b4bc4;
       text-decoration: none;
-      margin: 0 10px;
       font-weight: bold;
+      margin: 0 10px;
+      font-size: 15px;
     }
 
     nav a:hover {
       color: #8a2be2;
     }
 
-    section {
-      max-width: 900px;
-      margin: auto;
-      padding: 55px 20px;
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #6a5acd, #8a2be2);
+      color: white;
+      text-align: center;
+      padding: 95px 20px;
     }
 
-    h2 {
-      text-align: center;
-      color: #6a5acd;
-      margin-bottom: 25px;
+    .hero h1 {
+      font-size: 52px;
+      margin: 0 0 10px;
     }
 
-    .about {
-      text-align: center;
+    .hero h2 {
+      font-size: 25px;
+      font-weight: normal;
+      margin: 0 0 18px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: 0 auto 25px;
+      font-size: 18px;
+    }
+
+    .hero-buttons {
+      margin-top: 25px;
+    }
+
+    .hero-button {
+      display: inline-block;
+      margin: 6px;
+      padding: 13px 24px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
       background: white;
-      border-radius: 15px;
-      padding: 30px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      color: #6a5acd;
     }
 
+    .hero-button:hover {
+      transform: translateY(-2px);
+    }
+
+    .hero-button.outline {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+
+    /* GENERAL */
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 75px 20px;
+    }
+
+    section h2 {
+      text-align: center;
+      color: #5b4bc4;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .section-intro {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 40px;
+      color: #666;
+    }
+
+    /* ABOUT */
+    .about-card {
+      background: white;
+      padding: 35px;
+      border-radius: 18px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+      text-align: center;
+    }
+
+    .about-card p {
+      max-width: 750px;
+      margin: 12px auto;
+    }
+
+    /* SERVICES */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .service {
+      background: white;
+      padding: 30px 22px;
+      border-radius: 18px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+    }
+
+    .service-icon {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    .service h3 {
+      color: #5b4bc4;
+      margin-bottom: 10px;
+    }
+
+    /* SKILLS */
     .skills {
       display: flex;
       justify-content: center;
@@ -88,66 +169,130 @@
     .skill {
       background: #eeeaff;
       color: #5b4bc4;
-      padding: 12px 18px;
-      border-radius: 20px;
+      padding: 12px 20px;
+      border-radius: 30px;
       font-weight: bold;
     }
 
+    /* PROJECTS */
     .projects {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
     }
 
     .project {
       background: white;
-      width: 100%;
-      max-width: 390px;
-      padding: 28px;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      padding: 30px;
+      border-radius: 18px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+    }
+
+    .project-number {
+      color: #8a2be2;
+      font-weight: bold;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     .project h3 {
-      color: #6a5acd;
+      color: #5b4bc4;
+      font-size: 22px;
     }
 
-    .button {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 11px 20px;
-      background: #6a5acd;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
+    .project p {
+      color: #666;
     }
 
-    .button:hover {
-      background: #5848c2;
+    /* WHY WORK WITH ME */
+    .reasons {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
     }
 
-    footer {
-      background: #222;
+    .reason {
+      text-align: center;
+      background: white;
+      padding: 25px;
+      border-radius: 18px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+    }
+
+    .reason h3 {
+      color: #5b4bc4;
+    }
+
+    /* CONTACT */
+    .contact {
+      background: linear-gradient(135deg, #6a5acd, #8a2be2);
       color: white;
       text-align: center;
-      padding: 25px;
-      margin-top: 30px;
+      max-width: none;
     }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 32px;
+    .contact h2 {
+      color: white;
+    }
+
+    .contact p {
+      max-width: 650px;
+      margin: 10px auto 25px;
+    }
+
+    .contact-button {
+      display: inline-block;
+      background: white;
+      color: #5b4bc4;
+      padding: 14px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 5px;
+    }
+
+    .contact-button:hover {
+      transform: translateY(-2px);
+    }
+
+    /* FOOTER */
+    footer {
+      background: #202020;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+    }
+
+    footer p {
+      margin: 5px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 750px) {
+
+      .hero h1 {
+        font-size: 40px;
       }
 
-      header p {
-        font-size: 17px;
+      .hero h2 {
+        font-size: 21px;
+      }
+
+      .services,
+      .projects,
+      .reasons {
+        grid-template-columns: 1fr;
       }
 
       nav a {
-        margin: 0 5px;
-        font-size: 14px;
+        display: inline-block;
+        margin: 5px 7px;
+        font-size: 13px;
+      }
+
+      section {
+        padding: 55px 18px;
       }
     }
   </style>
@@ -155,111 +300,339 @@
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <h1>Reine Aira</h1>
-    <p>Beginner Web Designer & Creative Learner</p>
-    <p>Welcome to my portfolio!</p>
-  </header>
-
   <!-- NAVIGATION -->
   <nav>
     <a href="#about">About</a>
+    <a href="#services">Services</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
   </nav>
 
+
+  <!-- HERO -->
+  <header class="hero">
+
+    <h1>Reine Aira</h1>
+
+    <h2>Web Design & Digital Creative</h2>
+
+    <p>
+      I create simple, clean, and user-friendly digital projects
+      while continuously learning and improving my skills.
+    </p>
+
+    <div class="hero-buttons">
+      <a class="hero-button" href="#projects">
+        View My Work
+      </a>
+
+      <a class="hero-button outline" href="#contact">
+        Let's Work Together
+      </a>
+    </div>
+
+  </header>
+
+
   <!-- ABOUT -->
   <section id="about">
+
     <h2>About Me</h2>
 
-    <div class="about">
+    <p class="section-intro">
+      A motivated beginner building real-world digital skills
+      through hands-on projects.
+    </p>
+
+    <div class="about-card">
+
       <p>
-        Hello! I'm Reine Aira. I am a beginner in web design
-        and I enjoy learning new digital skills.
+        Hello! I'm Reine Aira, a beginner web designer and
+        digital creative who enjoys learning new technology
+        and turning ideas into simple digital projects.
       </p>
 
       <p>
-        I am hardworking, willing to learn, and excited to
-        create simple and useful websites.
+        I am currently building my portfolio through practical
+        projects using HTML, CSS, Canva, and CapCut.
       </p>
+
+      <p>
+        I may be starting my professional journey, but I am
+        hardworking, willing to learn, detail-oriented, and
+        committed to improving with every project.
+      </p>
+
     </div>
+
   </section>
+
+
+  <!-- SERVICES -->
+  <section id="services">
+
+    <h2>What I Can Help With</h2>
+
+    <p class="section-intro">
+      Simple digital services for individuals, small businesses,
+      and people who need help getting started online.
+    </p>
+
+    <div class="services">
+
+      <div class="service">
+
+        <div class="service-icon">🌐</div>
+
+        <h3>Simple Websites</h3>
+
+        <p>
+          Basic responsive websites and landing pages
+          using HTML and CSS.
+        </p>
+
+      </div>
+
+
+      <div class="service">
+
+        <div class="service-icon">🎨</div>
+
+        <h3>Canva Designs</h3>
+
+        <p>
+          Simple social media graphics, promotional materials,
+          and visual content.
+        </p>
+
+      </div>
+
+
+      <div class="service">
+
+        <div class="service-icon">🎬</div>
+
+        <h3>Short Video Editing</h3>
+
+        <p>
+          Basic editing for short-form videos using
+          tools such as CapCut.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
 
   <!-- SKILLS -->
   <section id="skills">
+
     <h2>My Skills</h2>
 
+    <p class="section-intro">
+      Skills I am currently practicing and developing.
+    </p>
+
     <div class="skills">
+
       <div class="skill">HTML</div>
       <div class="skill">CSS</div>
+      <div class="skill">Responsive Design</div>
       <div class="skill">Basic Web Design</div>
       <div class="skill">Canva</div>
       <div class="skill">CapCut</div>
+      <div class="skill">Basic Digital Tools</div>
       <div class="skill">Fast Learner</div>
+
     </div>
+
   </section>
+
 
   <!-- PROJECTS -->
   <section id="projects">
+
     <h2>My Projects</h2>
+
+    <p class="section-intro">
+      A collection of projects created while developing
+      my digital and web design skills.
+    </p>
+
 
     <div class="projects">
 
+
       <div class="project">
-        <h3>Project 1 — My First Website</h3>
+
+        <div class="project-number">
+          Project 01
+        </div>
+
+        <h3>Personal Portfolio Website</h3>
 
         <p>
-          A simple personal website created while learning
-          HTML and CSS.
+          A responsive personal portfolio website created
+          with HTML and CSS to showcase my skills,
+          services, and projects.
         </p>
 
-        <a class="button" href="#about">
-          View Project
-        </a>
       </div>
 
+
       <div class="project">
-        <h3>Project 2 — Small Business Landing Page 🍰</h3>
+
+        <div class="project-number">
+          Project 02
+        </div>
+
+        <h3>Small Business Landing Page</h3>
 
         <p>
-          A sample landing page created for a small business,
-          designed to be simple, clean, and easy to use.
+          A sample landing page concept designed for a
+          small business. The goal is to present information
+          clearly and make the page easy for visitors to use.
         </p>
 
-        <a class="button" href="#contact">
-          View Project
-        </a>
+      </div>
+
+
+      <div class="project">
+
+        <div class="project-number">
+          Project 03
+        </div>
+
+        <h3>AI & Digital Creativity Project</h3>
+
+        <p>
+          A creative digital project exploring responsible
+          AI use, visual storytelling, and the relationship
+          between technology and creativity.
+        </p>
+
+      </div>
+
+
+      <div class="project">
+
+        <div class="project-number">
+          Project 04
+        </div>
+
+        <h3>Short-Form Video Project</h3>
+
+        <p>
+          A short video editing project created using
+          CapCut, combining multiple clips, text,
+          transitions, and a clear message.
+        </p>
+
       </div>
 
     </div>
+
   </section>
+
+
+  <!-- WHY WORK WITH ME -->
+  <section>
+
+    <h2>Why Work With Me?</h2>
+
+    <p class="section-intro">
+      I believe good work starts with communication,
+      willingness to learn, and attention to detail.
+    </p>
+
+
+    <div class="reasons">
+
+
+      <div class="reason">
+
+        <div class="service-icon">💡</div>
+
+        <h3>Willing to Learn</h3>
+
+        <p>
+          I am open to feedback and continuously work
+          on improving my skills.
+        </p>
+
+      </div>
+
+
+      <div class="reason">
+
+        <div class="service-icon">🤝</div>
+
+        <h3>Client Focused</h3>
+
+        <p>
+          I value clear communication and understanding
+          what a client needs.
+        </p>
+
+      </div>
+
+
+      <div class="reason">
+
+        <div class="service-icon">✨</div>
+
+        <h3>Attention to Detail</h3>
+
+        <p>
+          I take time to review my work and make sure
+          the final result is clean and organized.
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
 
   <!-- CONTACT -->
-  <section id="contact">
-    <h2>Contact Me</h2>
+  <section id="contact" class="contact">
 
-    <div class="about">
+    <h2>Let's Work Together</h2>
 
-      <p>
-        Interested in working with me or learning more about
-        my work?
-      </p>
+    <p>
+      Have a simple website, design, or digital project
+      in mind? I'd be happy to hear about it and discuss
+      how I can help.
+    </p>
 
-      <a class="button" href="mailto:your@email.com">
-        Send Me an Email
-      </a>
+    <a
+      class="contact-button"
+      href="mailto:bautistareineaira34@gmail.com"
+    >
+      Email Me
+    </a>
 
-    </div>
   </section>
+
 
   <!-- FOOTER -->
   <footer>
+
     <p>
       © 2026 Reine Aira. All rights reserved.
     </p>
+
+    <p>
+      Web Design • Digital Creative • Beginner Freelancer
+    </p>
+
   </footer>
+
 
 </body>
 </html>
