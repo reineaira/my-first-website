@@ -3,30 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Reine Aira | My Portfolio</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            background: #f5f5f5;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
             color: #333;
+            line-height: 1.6;
         }
 
         header {
             background: #222;
             color: white;
             text-align: center;
-            padding: 60px 20px;
+            padding: 70px 20px;
         }
 
         header h1 {
-            font-size: 36px;
-            margin-bottom: 10px;
+            font-size: 40px;
+            margin: 0 0 10px;
         }
 
         header p {
             font-size: 18px;
+            margin: 8px 0;
         }
 
         section {
@@ -34,61 +40,119 @@
             margin: 30px auto;
             padding: 30px;
             background: white;
-            border-radius: 12px;
+            border-radius: 15px;
         }
 
         h2 {
+            margin-top: 0;
             color: #222;
         }
 
-        .skills span {
-            display: inline-block;
-            padding: 10px 15px;
-            margin: 5px;
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
             background: #eee;
+            padding: 10px 16px;
             border-radius: 20px;
         }
 
         .project {
+            background: #f7f7f7;
             padding: 20px;
             margin-top: 15px;
-            background: #f7f7f7;
-            border-radius: 10px;
+            border-radius: 12px;
+        }
+
+        .project h3 {
+            margin-top: 0;
         }
 
         footer {
             text-align: center;
-            padding: 30px;
             background: #222;
             color: white;
+            padding: 25px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 30px;
+            }
+
+            section {
+                margin: 20px 12px;
+                padding: 22px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-<header>
-    <h1>Hi, I'm Reine Aira 👋</h1>
-    <p>Beginner Web Creator & Fast Learner</p>
-    <p>I'm building my skills one project at a time. 🌱</p>
-</header>
+    <header>
+        <h1>Hi, I'm Reine Aira 👋</h1>
+        <p>Beginner Web Creator & Fast Learner</p>
+        <p>I'm building my skills one project at a time. 🌱</p>
+    </header>
 
-<section>
-    <h2>About Me</h2>
-    <p>
-        I am a beginner learning how to create websites using HTML and GitHub.
-        I enjoy learning new things and challenging myself to improve.
-        This portfolio is a collection of my projects and my learning journey.
-    </p>
-</section>
+    <section>
+        <h2>About Me</h2>
+        <p>
+            I am a beginner learning how to create websites using HTML and GitHub.
+            I enjoy learning new things, trying new challenges, and improving my skills.
+            This portfolio represents my learning journey and the projects I create along the way.
+        </p>
+    </section>
 
-<section>
-    <h2>My Skills</h2>
+    <section>
+        <h2>My Skills</h2>
 
-    <div class="skills">
-        <span>HTML</span>
-        <span>GitHub</span>
-        <span>Basic Web Design</span>
-        <span>Data Entry</span>
-        <span>Fast Learner</span>
-   
+        <div class="skills">
+            <div class="skill">HTML</div>
+            <div class="skill">GitHub</div>
+            <div class="skill">Basic Web Design</div>
+            <div class="skill">Data Entry</div>
+            <div class="skill">Fast Learner</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>My Projects</h2>
+
+        <div class="project">
+            <h3>Project 1 — My First Website 💻</h3>
+            <p>
+                My first website project created using HTML and GitHub.
+                This project was my first step into learning web development.
+            </p>
+        </div>
+
+        <div class="project">
+            <h3>Project 2 — Small Business Landing Page 🍰</h3>
+            <p>
+                A sample website concept for a small food business.
+                This project shows how I can create a simple and informative
+                webpage for a small business.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Contact Me 📩</h2>
+        <p>
+            I am open to learning opportunities, beginner-friendly projects,
+            and new experiences.
+        </p>
+    </section>
+
+    <footer>
+        <p>© 2026 Reine Aira | My Portfolio</p>
+    </footer>
+
+</body>
+</html>
