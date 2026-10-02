@@ -1,904 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Reine Aira | Web Design & Digital Creative</title>
-
-  <meta
-    name="description"
-    content="Reine Aira - Web Design and Digital Creative Portfolio"
-  >
-
-  <style>
-
-    * {
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f7f7fb;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    /* NAVIGATION */
-
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: white;
-      padding: 15px 20px;
-      text-align: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-    }
-
-    nav a {
-      color: #5b4bc4;
-      text-decoration: none;
-      font-weight: bold;
-      margin: 0 10px;
-      font-size: 15px;
-    }
-
-    nav a:hover {
-      color: #8a2be2;
-    }
-
-    /* HERO */
-
-    .hero {
-      background: linear-gradient(135deg, #6a5acd, #8a2be2);
-      color: white;
-      text-align: center;
-      padding: 95px 20px;
-    }
-
-    .hero h1 {
-      font-size: 52px;
-      margin: 0 0 10px;
-    }
-
-    .hero h2 {
-      font-size: 25px;
-      font-weight: normal;
-      margin: 0 0 18px;
-    }
-
-    .hero p {
-      max-width: 650px;
-      margin: 0 auto 25px;
-      font-size: 18px;
-    }
-
-    .hero-buttons {
-      margin-top: 25px;
-    }
-
-    .hero-button {
-      display: inline-block;
-      margin: 6px;
-      padding: 13px 24px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      background: white;
-      color: #6a5acd;
-    }
-
-    .hero-button.outline {
-      background: transparent;
-      color: white;
-      border: 2px solid white;
-    }
-
-    /* GENERAL */
-
-    section {
-      max-width: 1000px;
-      margin: auto;
-      padding: 75px 20px;
-    }
-
-    section h2 {
-      text-align: center;
-      color: #5b4bc4;
-      font-size: 32px;
-      margin-bottom: 15px;
-    }
-
-    .section-intro {
-      text-align: center;
-      max-width: 650px;
-      margin: 0 auto 40px;
-      color: #666;
-    }
-
-    /* ABOUT */
-
-    .about-card {
-      background: white;
-      padding: 35px;
-      border-radius: 18px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.07);
-      text-align: center;
-    }
-
-    .about-card p {
-      max-width: 750px;
-      margin: 12px auto;
-    }
-
-    /* SERVICES */
-
-    .services {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .service {
-      background: white;
-      padding: 30px 22px;
-      border-radius: 18px;
-      text-align: center;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.07);
-    }
-
-    .service-icon {
-      font-size: 42px;
-      margin-bottom: 10px;
-    }
-
-    .service h3 {
-      color: #5b4bc4;
-      margin-bottom: 10px;
-    }
-
-    /* SKILLS */
-
-    .skills {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .skill {
-      background: #eeeaff;
-      color: #5b4bc4;
-      padding: 12px 20px;
-      border-radius: 30px;
-      font-weight: bold;
-    }
-
-    /* PROJECTS */
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 25px;
-    }
-
-    .project {
-      background: white;
-      padding: 30px;
-      border-radius: 18px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.07);
-    }
-
-    .project-number {
-      color: #8a2be2;
-      font-weight: bold;
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .project h3 {
-      color: #5b4bc4;
-      font-size: 22px;
-    }
-
-    .project p {
-      color: #666;
-    }
-
-    .project-button {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 11px 20px;
-      background: #6a5acd;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-    }
-
-    /* SWEET CORNER */
-
-    .showcase {
-      margin-top: 35px;
-      padding: 35px;
-      background: #eeeaff;
-      border-radius: 20px;
-      text-align: center;
-    }
-
-    .showcase h3 {
-      color: #5b4bc4;
-      font-size: 28px;
-      margin-top: 0;
-    }
-
-    .sweet-products {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-      margin-top: 30px;
-    }
-
-    .sweet-product {
-      background: white;
-      padding: 22px 15px;
-      border-radius: 16px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    }
-
-    .sweet-icon {
-      font-size: 45px;
-    }
-
-    .sweet-product h4 {
-      color: #5b4bc4;
-      font-size: 18px;
-      margin: 10px 0;
-    }
-
-    .sweet-product p {
-      color: #666;
-      font-size: 14px;
-    }
-
-    .sweet-product strong {
-      color: #8a2be2;
-      font-size: 17px;
-    }
-
-    .sweet-button {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 10px 18px;
-      background: #6a5acd;
-      color: white;
-      text-decoration: none;
-      border-radius: 20px;
-      font-weight: bold;
-    }
-
-    .sweet-button:hover {
-      background: #5848c2;
-    }
-
-    .sweet-contact {
-      margin-top: 30px;
-      padding: 25px;
-      background: white;
-      border-radius: 16px;
-    }
-
-    .sweet-contact h4 {
-      color: #5b4bc4;
-      font-size: 20px;
-      margin-top: 0;
-    }
-
-    /* WHY WORK WITH ME */
-
-    .reasons {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .reason {
-      text-align: center;
-      background: white;
-      padding: 25px;
-      border-radius: 18px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.07);
-    }
-
-    .reason h3 {
-      color: #5b4bc4;
-    }
-
-    /* CONTACT */
-
-    .contact {
-      background: linear-gradient(135deg, #6a5acd, #8a2be2);
-      color: white;
-      text-align: center;
-      max-width: none;
-    }
-
-    .contact h2 {
-      color: white;
-    }
-
-    .contact p {
-      max-width: 650px;
-      margin: 10px auto 25px;
-    }
-
-    .contact-button {
-      display: inline-block;
-      background: white;
-      color: #5b4bc4;
-      padding: 14px 28px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      margin: 5px;
-    }
-
-    /* FOOTER */
-
-    footer {
-      background: #202020;
-      color: white;
-      text-align: center;
-      padding: 25px 15px;
-    }
-
-    footer p {
-      margin: 5px;
-    }
-
-    /* MOBILE */
-
-    @media (max-width: 750px) {
-
-      .hero h1 {
-        font-size: 40px;
-      }
-
-      .hero h2 {
-        font-size: 21px;
-      }
-
-      .services,
-      .projects,
-      .reasons {
-        grid-template-columns: 1fr;
-      }
-
-      .sweet-products {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      nav a {
-        display: inline-block;
-        margin: 5px 7px;
-        font-size: 13px;
-      }
-
-      section {
-        padding: 55px 18px;
-      }
-
-    }
-
-    @media (max-width: 450px) {
-
-      .sweet-products {
-        grid-template-columns: 1fr;
-      }
-
-    }
-
-  </style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reine Aira | Portfolio</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8f1e7;
+            color: #3d3028;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #fffaf4;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        section {
+            max-width: 900px;
+            margin: auto;
+            padding: 50px 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 30px;
+        }
+
+        .about {
+            text-align: center;
+        }
+
+        .projects {
+            display: grid;
+            gap: 30px;
+        }
+
+        .project {
+            background: white;
+            border-radius: 18px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .project h3 {
+            margin-bottom: 12px;
+        }
+
+        .project img {
+            width: 100%;
+            max-width: 600px;
+            display: block;
+            margin: 20px auto;
+            border-radius: 12px;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: #6f4e37;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            background: #fffaf4;
+            margin-top: 30px;
+        }
+    </style>
 </head>
 
 <body>
 
-  <!-- NAVIGATION -->
+    <header>
+        <h1>Hi, I'm Reine Aira 👋</h1>
+        <p>Welcome to my portfolio</p>
+    </header>
 
-  <nav>
-
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-
-  </nav>
-
-
-  <!-- HERO -->
-
-  <header class="hero">
-
-    <h1>Reine Aira</h1>
-
-    <h2>Web Design & Digital Creative</h2>
-
-    <p>
-      I create simple, clean, and user-friendly digital projects
-      while continuously learning and improving my skills.
-    </p>
-
-    <div class="hero-buttons">
-
-      <a class="hero-button" href="#projects">
-        View My Work
-      </a>
-
-      <a class="hero-button outline" href="#contact">
-        Let's Work Together
-      </a>
-
-    </div>
-
-  </header>
-
-
-  <!-- ABOUT -->
-
-  <section id="about">
-
-    <h2>About Me</h2>
-
-    <p class="section-intro">
-      A motivated beginner building real-world digital skills
-      through hands-on projects.
-    </p>
-
-    <div class="about-card">
-
-      <p>
-        Hello! I'm Reine Aira, a beginner web designer and
-        digital creative who enjoys learning new technology
-        and turning ideas into simple digital projects.
-      </p>
-
-      <p>
-        I am currently building my portfolio through practical
-        projects using HTML, CSS, Canva, and CapCut.
-      </p>
-
-      <p>
-        I am hardworking, willing to learn, detail-oriented,
-        and committed to improving with every project.
-      </p>
-
-    </div>
-
-  </section>
-
-
-  <!-- SERVICES -->
-
-  <section id="services">
-
-    <h2>What I Can Help With</h2>
-
-    <p class="section-intro">
-      Simple digital services for individuals and small businesses.
-    </p>
-
-    <div class="services">
-
-      <div class="service">
-
-        <div class="service-icon">🌐</div>
-
-        <h3>Simple Websites</h3>
-
+    <section class="about">
+        <h2>About Me</h2>
         <p>
-          Basic responsive websites and landing pages
-          using HTML and CSS.
+            I am a hardworking and willing-to-learn person who enjoys
+            creating simple digital projects and learning new skills.
+            I am always open to new opportunities and experiences.
         </p>
+    </section>
 
-      </div>
+    <section>
+        <h2>My Projects</h2>
 
-      <div class="service">
+        <div class="projects">
 
-        <div class="service-icon">🎨</div>
+            <div class="project">
+                <h3>Project 1 — Personal Portfolio 🌷</h3>
+                <p>
+                    A simple personal portfolio website created to
+                    showcase my skills, projects, and creativity.
+                </p>
+            </div>
 
-        <h3>Canva Designs</h3>
+            <div class="project">
+                <h3>Project 2 — Brew & Bloom ☕🌸</h3>
 
-        <p>
-          Simple social media graphics, promotional materials,
-          and visual content.
-        </p>
+                <p>
+                    A sample small-business landing page design for
+                    Brew & Bloom, combining coffee and floral-inspired
+                    branding.
+                </p>
 
-      </div>
+                <img
+                    src="BREW%20%26%20BLOOM_20261002_163528_0000.png"
+                    alt="Brew and Bloom project"
+                >
+            </div>
 
-      <div class="service">
+            <div class="project">
+                <h3>Sweet Corner 🍰</h3>
 
-        <div class="service-icon">🎬</div>
+                <p>
+                    A sample concept for a small dessert business,
+                    created as part of my portfolio projects.
+                </p>
 
-        <h3>Short Video Editing</h3>
+                <a class="button" href="#contact">Want to place an order?</a>
+            </div>
 
-        <p>
-          Basic editing for short-form videos using CapCut.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- SKILLS -->
-
-  <section id="skills">
-
-    <h2>My Skills</h2>
-
-    <p class="section-intro">
-      Skills I am currently practicing and developing.
-    </p>
-
-    <div class="skills">
-
-      <div class="skill">HTML</div>
-      <div class="skill">CSS</div>
-      <div class="skill">Responsive Design</div>
-      <div class="skill">Basic Web Design</div>
-      <div class="skill">Canva</div>
-      <div class="skill">CapCut</div>
-      <div class="skill">Basic Digital Tools</div>
-      <div class="skill">Fast Learner</div>
-
-    </div>
-
-  </section>
-
-
-  <!-- PROJECTS -->
-
-  <section id="projects">
-
-    <h2>My Projects</h2>
-
-    <p class="section-intro">
-      Here are projects I created while developing
-      my web design and digital skills.
-    </p>
-
-    <div class="projects">
-
-      <!-- PROJECT 1 -->
-
-      <div class="project">
-
-        <div class="project-number">
-          Project 01
         </div>
+    </section>
 
-        <h3>My First Website 💻</h3>
+    <section id="contact" class="contact">
+        <h2>Let's Connect 💌</h2>
 
         <p>
-          My first personal website created using HTML and CSS.
-          This project helped me practice web structure,
-          styling, responsive design, and publishing a website online.
+            Thank you for visiting my portfolio!
         </p>
 
-        <a
-          class="project-button"
-          href="https://reineaira.github.io/my-first-website/"
-          target="_blank"
-        >
-          Open Website
+        <a class="button" href="mailto:reineaira34@gmail.com">
+            Contact Me
         </a>
-
-      </div>
-
-
-      <!-- PROJECT 2 -->
-
-      <div class="project">
-
-        <div class="project-number">
-          Project 02
-        </div>
-
-        <h3>Small Business Landing Page 🍰</h3>
-
-        <p>
-          A sample landing page concept for a small food business.
-          It focuses on a clean, simple, and welcoming design
-          for customers.
-        </p>
-
-        <a
-          class="project-button"
-          href="#sweet-corner"
-        >
-          View Project
-        </a>
-
-      </div>
-
-
-      <!-- PROJECT 3 -->
-
-      <div class="project">
-
-        <div class="project-number">
-          Project 03
-        </div>
-
-        <h3>AI & Digital Creativity 🤖</h3>
-
-        <p>
-          A creative digital project exploring responsible AI,
-          visual storytelling, and the relationship between
-          technology and creativity.
-        </p>
-
-      </div>
-
-
-      <!-- PROJECT 4 -->
-
-      <div class="project">
-
-        <div class="project-number">
-          Project 04
-        </div>
-
-        <h3>Short-Form Video Editing 🎬</h3>
-
-        <p>
-          A short video editing project created using CapCut,
-          combining clips, text, transitions, and a clear message.
-        </p>
-
-      </div>
-
-    </div>
-
-
-    <!-- SWEET CORNER -->
-
-    <div id="sweet-corner" class="showcase">
-
-      <h3>🍰 Sweet Corner</h3>
-
-      <p>
-        Freshly baked treats made with love.
-        Choose your favorite dessert and place your order today!
-      </p>
-
-      <div class="sweet-products">
-
-        <div class="sweet-product">
-
-          <div class="sweet-icon">🧁</div>
-
-          <h4>Classic Cupcakes</h4>
-
-          <p>
-            Soft and delicious cupcakes with creamy frosting.
-          </p>
-
-          <strong>₱120 / 6 pcs</strong>
-
-          <br>
-
-          <a
-            class="sweet-button"
-            href="mailto:bautistareineaira34@gmail.com?subject=Order%20-%20Classic%20Cupcakes"
-          >
-            Order Now
-          </a>
-
-        </div>
-
-
-        <div class="sweet-product">
-
-          <div class="sweet-icon">🍪</div>
-
-          <h4>Chocolate Cookies</h4>
-
-          <p>
-            Homemade chocolate cookies perfect for any occasion.
-          </p>
-
-          <strong>₱150 / box</strong>
-
-          <br>
-
-          <a
-            class="sweet-button"
-            href="mailto:bautistareineaira34@gmail.com?subject=Order%20-%20Chocolate%20Cookies"
-          >
-            Order Now
-          </a>
-
-        </div>
-
-
-        <div class="sweet-product">
-
-          <div class="sweet-icon">🍰</div>
-
-          <h4>Mini Celebration Cake</h4>
-
-          <p>
-            A simple and sweet cake for birthdays and celebrations.
-          </p>
-
-          <strong>₱450</strong>
-
-          <br>
-
-          <a
-            class="sweet-button"
-            href="mailto:bautistareineaira34@gmail.com?subject=Order%20-%20Mini%20Celebration%20Cake"
-          >
-            Order Now
-          </a>
-
-        </div>
-
-
-        <div class="sweet-product">
-
-          <div class="sweet-icon">🍓</div>
-
-          <h4>Strawberry Dessert</h4>
-
-          <p>
-            A creamy strawberry treat made for dessert lovers.
-          </p>
-
-          <strong>₱180</strong>
-
-          <br>
-
-          <a
-            class="sweet-button"
-            href="mailto:bautistareineaira34@gmail.com?subject=Order%20-%20Strawberry%20Dessert"
-          >
-            Order Now
-          </a>
-
-        </div>
-
-      </div>
-
-
-      <div class="sweet-contact">
-
-        <h4>Want to place an order?</h4>
-
-        <p>
-          Send us a message for orders, inquiries,
-          and special requests.
-        </p>
-
-        <a
-          class="contact-button"
-          href="mailto:bautistareineaira34@gmail.com?subject=Sweet%20Corner%20Inquiry"
-        >
-          📩 Contact Us
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- WHY WORK WITH ME -->
-
-  <section>
-
-    <h2>Why Work With Me?</h2>
-
-    <p class="section-intro">
-      I believe good work starts with communication,
-      willingness to learn, and attention to detail.
-    </p>
-
-    <div class="reasons">
-
-      <div class="reason">
-
-        <div class="service-icon">💡</div>
-
-        <h3>Willing to Learn</h3>
-
-        <p>
-          I am open to feedback and continuously work
-          on improving my skills.
-        </p>
-
-      </div>
-
-
-      <div class="reason">
-
-        <div class="service-icon">🤝</div>
-
-        <h3>Client Focused</h3>
-
-        <p>
-          I value clear communication and understanding
-          what a client needs.
-        </p>
-
-      </div>
-
-
-      <div class="reason">
-
-        <div class="service-icon">✨</div>
-
-        <h3>Attention to Detail</h3>
-
-        <p>
-          I take time to review my work and make sure
-          the final result is clean and organized.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- CONTACT -->
-
-  <section id="contact" class="contact">
-
-    <h2>Let's Work Together</h2>
-
-    <p>
-      Have a simple website, design, or digital project
-      in mind? I'd be happy to hear about it and discuss
-      how I can help.
-    </p>
-
-    <a
-      class="contact-button"
-      href="mailto:bautistareineaira34@gmail.com"
-    >
-      Email Me
-    </a>
-
-  </section>
-
-
-  <!-- FOOTER -->
-
-  <footer>
-
-    <p>
-      © 2026 Reine Aira. All rights reserved.
-    </p>
-
-    <p>
-      Web Design • Digital Creative • Beginner Freelancer
-    </p>
-
-  </footer>
+    </section>
+
+    <footer>
+        <p>© 2026 Reine Aira. All rights reserved.</p>
+    </footer>
 
 </body>
-
 </html>
